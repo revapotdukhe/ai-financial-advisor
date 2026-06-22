@@ -104,7 +104,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://ai-financial-advisor-backend-0my1.onrender.comapi/ai/advice", {
+      const res = await fetch("https://ai-financial-advisor-backend-0my1.onrender.comapi/ai/advice", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
