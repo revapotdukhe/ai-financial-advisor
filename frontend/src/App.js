@@ -31,11 +31,11 @@ function App() {
   };
 
   const deleteItem = async (id) => {
-   const res = await fetch("https://ai-financial-advisor-backend-0my1.onrender.com/api/ai/advice", {
+   await fetch(`https://ai-financial-advisor-backend-0my1.onrender.com/api/ai/history/${id}`, {
       method: "DELETE",
     });
     getHistory();
-  };
+};
 
   const handleExpenseChange = (index, field, value) => {
     const updated = [...expenses];
