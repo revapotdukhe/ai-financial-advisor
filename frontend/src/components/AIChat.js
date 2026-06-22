@@ -22,7 +22,7 @@ const AIChat = ({ income, expenses, onAsk }) => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5050/api/ai/chat", {
+      const res = await fetch("https://ai-financial-advisor-backend-0my1.onrender.com/api/ai/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
