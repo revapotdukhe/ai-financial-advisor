@@ -22,7 +22,7 @@ function App() {
 
   const getHistory = async () => {
     try {
-      const res = await fetch("http://localhost:5050/api/ai/history");
+     const res = await fetch("https://ai-financial-advisor-backend-0my1.onrender.com/api/ai/history");
       const data = await res.json();
       setHistory(data);
     } catch (err) {
@@ -31,7 +31,7 @@ function App() {
   };
 
   const deleteItem = async (id) => {
-    await fetch(`http://localhost:5050/api/ai/history/${id}`, {
+   const res = await fetch("https://ai-financial-advisor-backend-0my1.onrender.com/api/ai/advice", {
       method: "DELETE",
     });
     getHistory();
