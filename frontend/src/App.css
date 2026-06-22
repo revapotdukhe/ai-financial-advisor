@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+
+  /* 🌤️ lighter background */
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #111827;
+  padding: 20px;
+  border-right: 1px solid #374151;
+}
+
+.sidebar h4 {
+  font-size: 13px;
+  color: #9ca3af;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 6px;
+}
+
+/* HISTORY */
+.history-item {
+  background: #1f2937;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.history-item:hover {
+  background: #374151;
+}
+
+.history-item small {
+  color: #9ca3af;
+}
+
+/* MAIN */
+.app {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* MAIN CARD */
+.app-content {
+  width: 950px;
+
+  /* 🌤️ MUCH LIGHTER CARD */
+  background: #374151;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border: 1px solid #4b5563;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* HEADER */
+h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+/* INPUT */
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.top input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 8px;
+  background: #4b5563;
+  border: 1px solid #6b7280;
+  color: #f3f4f6;
+  outline: none;
+}
+
+.top input:focus {
+  border-color: #3b82f6;
+}
+
+/* TITLE + AMOUNT */
+.expense-row {
+  display: flex;
+  gap: 10px;
+}
+
+.expense-row input,
+.expense-row select {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  background: #4b5563;
+  border: 1px solid #6b7280;
+  color: #f3f4f6;
+  outline: none;
+  font-size: 16px;
+}
+
+.expense-row input:focus,
+.expense-row select:focus {
+  border-color: #3b82f6;
+}
+
+.expense-row select option {
+  background: #4b5563;
+  color: #f3f4f6;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  background: #3b82f6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* MIDDLE */
+.middle {
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT */
+.left {
+  flex: 1;
+
+  /* 🌤️ lighter section */
+  background: #4b5563;
+  border-radius: 12px;
+  border: 1px solid #6b7280;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RIGHT */
+.right {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* SUMMARY */
+.summary {
+  background: #4b5563;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #6b7280;
+  text-align: center;
+}
+
+/* ADVICE */
+.advice-box {
+  flex: 2;
+  background: #4b5563;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #6b7280;
+}
+
+.advice-content p {
+  color: #e5e7eb;
+}
+
+/* BALANCE */
+.positive {
+  color: #22c55e;
+}
+
+.negative {
+  color: #ef4444;
+}
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .app {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .middle {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .expense-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.delete-btn {
+  flex: 0 !important;
+  width: 45px;
+  min-width: 45px;
+  padding: 0;
+  background: #4b5563;
+  border: 1px solid #6b7280;
+  color: #d1d5db;
+  border-radius: 8px;
+}
+
+.delete-btn:hover {
+  background: #374151;
+}
+.ai-title {
+  color: #f3f4f6;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #60a5fa;
+  }
+
+  to {
+    text-shadow: 0 0 15px #60a5fa;
+  }
+}
