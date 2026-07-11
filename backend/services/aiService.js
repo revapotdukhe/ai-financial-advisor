@@ -44,7 +44,7 @@ Now give advice:
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
-        model: model: "meta-llama/llama-3.1-8b-instruct",
+        model: "meta-llama/llama-3.1-8b-instruct",
         messages: [
           { role: "user", content: prompt }
         ]
